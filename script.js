@@ -5,7 +5,7 @@ const invalidPassword = document.querySelector(".invalid-password");
 const logBtn = document.querySelector(".log-in-btn");
 const form = document.querySelector(".form");
 
-const checkValid = /^[a-z0-9]{6,20}$/;
+const checkValid = /^[a-zA-Z0-9]{6,20}$/;
 
 const validLogIn = (validation, input, display) => {
   if (!validation.test(input)) {
