@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@1,100;1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <title>Information about the country</title>
+</head>
+
+<body>
+    <header>
+        <nav class="menu">
+        <div class="left-side-menu">
+            <a href="./index.html" class="main-header">COUNTRIES OF THE WORLD</a>
+            <a href="../favorites/index.html" class="favorites-page">Favorites</a>
+        </div>
+        <div class="right-side-menu">
+            <input type="text" class="search-country" placeholder="Write country...">
+            <a class="log-out" href="../index.html">Logout</a>
+            
+        </div>
+    </nav>
+    </header>
+    <main>
+        <div class="all-countries">
+            <p class="header">All Countries</p>
+            <div class="loader"><svg version="1.1" id="L9" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" width="100px" x="0px" y="0px" viewBox="0 0 100 100"
+                enable-background="new 0 0 0 0" xml:space="preserve">
+                <path fill= "#757575"
+                    d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50">
+                    <animateTransform attributeName="transform" attributeType="XML" type="rotate" dur="1s"
+                        from="0 50 50" to="360 50 50" repeatCount="indefinite" />
+                </path>
+            </svg></div>
+            <div class="not-found">Тo matches found. <br> Check correctly spelled the name of the country</div>
+            <div class="countries-container"> 
+                <div class="countries"></div>
+            </div>
+        </div>
+    </main>
+    <script src="./script.js">
+    </script>
+</body>
+
+</html>
