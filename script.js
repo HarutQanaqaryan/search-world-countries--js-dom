@@ -32,7 +32,7 @@ logBtn.addEventListener("click", () => {
     invalidLogin.style.display === "none" &&
     invalidPassword.style.display === "none"
   ) {
-    form.setAttribute("action", "../countries/index.html");
+    form.setAttribute("action", "./countries/index.html");
     form.setAttribute("target", "_blank");
   }
 });
