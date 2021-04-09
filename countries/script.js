@@ -7,8 +7,6 @@ const favoritesHeader = document.querySelector(".favorites-header");
 const allCountriesHeader = document.querySelector(".header");
 const logOutLogin = document.querySelector(".log-out");
 
-const favorites = [];
-
 const getCountries = (url) => {
   fetch(url)
     .then((response) => response.json())
@@ -59,23 +57,13 @@ const renderCountries = (countries) => {
     countryName.append(countryCapital, natName, countryRegion);
 
     addFavorit.addEventListener("click", (event) => {
-      addToFavoriteList(event.path, country);
       addFavorit.style.display = " none";
       addedFavorites.style.display = "block";
       localStorage.setItem(countryName.textContent, country.outerHTML);
     });
   });
 };
-window.onload = () => {
-  getCountries(`https://restcountries.eu/rest/v2/all`);
-};
-const addToFavoriteList = (add, currentCountry) => {
-  add.forEach((item) => {
-    if (item === currentCountry) {
-      favorites.push(item);
-    }
-  });
-};
+
 searchCountry.addEventListener("input", (event) => {
   const searchValue = event.target.value;
   allCoutries.innerHTML = "";
@@ -85,3 +73,7 @@ searchCountry.addEventListener("input", (event) => {
     getCountries(`https://restcountries.eu/rest/v2/all`);
   }
 });
+
+window.onload = () => {
+  getCountries(`https://restcountries.eu/rest/v2/all`);
+};
