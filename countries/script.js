@@ -15,6 +15,7 @@ const getCountries = (url) => {
       renderCountries(countries);
       notFound.style.display = "none";
       loader.style.display = "none";
+      console.log(countries)
     })
     .catch((err) => {
       err = notFound.style.display = "block";
@@ -22,7 +23,7 @@ const getCountries = (url) => {
 };
 
 const renderCountries = (countries) => {
-  countries.forEach(({ name, flag, capital, nativeName, region }) => {
+  countries.forEach(({ name, flags, capital, nativeName, region }) => {
     const country = document.createElement("div");
     const countryName = document.createElement("div");
     const countryCapital = document.createElement("p");
@@ -45,9 +46,9 @@ const renderCountries = (countries) => {
     countryName.classList.add("country-name");
 
     addFavorit.setAttribute("src", "../img/add-to-favorites.png");
-    countryFlag.setAttribute("src", flag);
+    countryFlag.setAttribute("src", flags.svg);
 
-    countryName.textContent = name;
+    countryName.textContent = name.common;
     countryCapital.textContent = "Capital: " + capital;
     natName.textContent = "Native Name: " + nativeName;
     countryRegion.textContent = "Region: " + region;
@@ -68,12 +69,12 @@ searchCountry.addEventListener("input", (event) => {
   const searchValue = event.target.value;
   allCoutries.innerHTML = "";
   if (searchValue != "") {
-    getCountries(`https://restcountries.eu/rest/v2/name/${searchValue}`);
+    getCountries(`https://restcountries.com/v3.1/name/${searchValue}`);
   } else {
-    getCountries(`https://restcountries.eu/rest/v2/all`);
+    getCountries(`https://restcountries.com/v3.1/all`);
   }
 });
 
 window.onload = () => {
-  getCountries(`https://restcountries.eu/rest/v2/all`);
+  getCountries(`https://restcountries.com/v3.1/all`);
 };
