@@ -1,1 +1,1 @@
-https://harutqanaqaryan.github.io/search-world-countries--js-dom/
+https://harutqanaqaryan.github.io/search_countries_info--JS-DOM-/
