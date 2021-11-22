@@ -50,7 +50,7 @@ const renderCountries = (countries) => {
 
     countryName.textContent = name.common;
     countryCapital.textContent = "Capital: " + capital;
-    natName.textContent = "Native Name: " + nativeName;
+    natName.textContent = "Official Name: " + name.official
     countryRegion.textContent = "Region: " + region;
 
     allCoutries.append(country);

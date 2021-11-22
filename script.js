@@ -33,7 +33,6 @@ logBtn.addEventListener("click", () => {
     invalidPassword.style.display === "none"
   ) {
     form.setAttribute("action", "./countries/index.html");
-    form.setAttribute("target", "_blank");
   }
 });
 
